@@ -317,7 +317,7 @@ function library:Window(title)
 		local TextLabel_22 = Instance.new("TextLabel")
 		local Sample_22 = Instance.new("ImageLabel")
 		local Sample_33 = Instance.new("ImageLabel")
-		local Frame_6 = Instance.new("Frame")
+		local Frame_66 = Instance.new("Frame")
 
 		Frame_55.Parent = ScrollingFrame
 		Frame_55.BackgroundColor3 = Color3.fromRGB(157, 144, 111)
