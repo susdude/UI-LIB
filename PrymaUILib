@@ -403,12 +403,12 @@ function library:Window(title)
 			callback(enabled)
 
 			if enabled then
-				while enabled and checked.ImageTransparency > 0 and wait() do
-					checked.ImageTransparency = checked.ImageTransparency - 0.2
+				while enabled and checked1.ImageTransparency > 0 and wait() do
+					checked1.ImageTransparency = checked1.ImageTransparency - 0.2
 				end
 			else
-				while not enabled and checked.ImageTransparency < 1 and wait() do
-					checked.ImageTransparency = checked.ImageTransparency + 0.2
+				while not enabled and checked1.ImageTransparency < 1 and wait() do
+					checked1.ImageTransparency = checked1.ImageTransparency + 0.2
 				end
 			end
 		end
