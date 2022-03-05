@@ -335,6 +335,29 @@ function library:Window(title)
 		TextLabel_22.TextSize = 13.000
 		TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
 
+		checked1.Name = "checked1"
+		checked1.Parent = Frame_55
+		checked1.BackgroundTransparency = 1.000
+		checked1.Position = UDim2.new(0.916318059, 0, 0.13333334, 0)
+		checked1.Size = UDim2.new(0, 20, 0, 20)
+		checked1.ZIndex = 2
+		checked1.Image = "rbxassetid://3926309567"
+		checked1.ImageColor3 = Color3.fromRGB(189, 189, 189)
+		checked1.ImageRectOffset = Vector2.new(784, 420)
+		checked1.ImageRectSize = Vector2.new(48, 48)
+		checked1.ImageTransparency = 1.000
+
+		unchecked1.Name = "unchecked1"
+		unchecked1.Parent = Frame_55
+		unchecked1.BackgroundTransparency = 1.000
+		unchecked1.Position = UDim2.new(0.916317999, 0, 0.13333334, 0)
+		unchecked1.Size = UDim2.new(0, 20, 0, 20)
+		unchecked1.ZIndex = 2
+		unchecked1.Image = "rbxassetid://3926309567"
+		unchecked1.ImageColor3 = Color3.fromRGB(189, 189, 189)
+		unchecked1.ImageRectOffset = Vector2.new(628, 420)
+		unchecked1.ImageRectSize = Vector2.new(48, 48)
+
 		Sample_22.Name = "Sample"
 		Sample_22.Parent = ScreenGui
 		Sample_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
