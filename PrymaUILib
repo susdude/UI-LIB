@@ -28,6 +28,8 @@ function library:Window(title)
 	local UIListLayout = Instance.new("UIListLayout")
 	local Frame_5 = Instance.new("Frame")
 
+	ScreenGui.Name = "Волосатые мужики"
+
 	ImageLabel.Parent = ScreenGui
 	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ImageLabel.BackgroundTransparency = 1.000
