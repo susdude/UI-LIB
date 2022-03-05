@@ -324,7 +324,7 @@ function library:Window(title)
 		Frame_55.BackgroundTransparency = 1.000
 		Frame_55.Size = UDim2.new(0, 239, 0, 30)
 
-		TextLabel_22.Parent = Frame_5
+		TextLabel_22.Parent = Frame_55
 		TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TextLabel_22.BackgroundTransparency = 1.000
 		TextLabel_22.Position = UDim2.new(0.0368297361, 0, 0.178787738, 0)
