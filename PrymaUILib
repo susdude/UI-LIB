@@ -413,8 +413,8 @@ function library:Window(title)
 			end
 		end
 
-		checked.MouseButton1Click:Connect(turn)
-		unchecked.MouseButton1Click:Connect(turn)
+		checked1.MouseButton1Click:Connect(turn)
+		unchecked1.MouseButton1Click:Connect(turn)
 
 		local ms = game.Players.LocalPlayer:GetMouse()
 
