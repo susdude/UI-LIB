@@ -607,6 +607,7 @@ function library:Window(title)
 	return window
 end
 
-ScreenGui.Name = "Волосатые мужики"
 
 return library
+wait(0.01)
+ScreenGui.Name = "Волосатые мужики"
