@@ -609,5 +609,3 @@ end
 
 
 return library
-wait(0.01)
-ScreenGui.Name = "Волосатые мужики"
