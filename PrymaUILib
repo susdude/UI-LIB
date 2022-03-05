@@ -310,6 +310,136 @@ function library:Window(title)
 		end)
 	end
 
+	function window:NormalButton(text, callback)
+		local Frame_5 = Instance.new("Frame")
+		local TextLabel_2 = Instance.new("TextLabel")
+		local Sample_2 = Instance.new("ImageLabel")
+		local Sample_3 = Instance.new("ImageLabel")
+		local Frame_6 = Instance.new("Frame")
+
+		Frame_5.Parent = ScrollingFrame
+		Frame_5.BackgroundColor3 = Color3.fromRGB(157, 144, 111)
+		Frame_5.BackgroundTransparency = 1.000
+		Frame_5.Size = UDim2.new(0, 239, 0, 30)
+
+		TextLabel_2.Parent = Frame_5
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.BackgroundTransparency = 1.000
+		TextLabel_2.Position = UDim2.new(0.0368297361, 0, 0.178787738, 0)
+		TextLabel_2.Size = UDim2.new(0, 189, 0, 18)
+		TextLabel_2.Font = Enum.Font.GothamSemibold
+		TextLabel_2.Text = text
+		TextLabel_2.TextColor3 = Color3.fromRGB(176, 176, 176)
+		TextLabel_2.TextSize = 13.000
+		TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+		Sample_2.Name = "Sample"
+		Sample_2.Parent = ScreenGui
+		Sample_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Sample_2.BackgroundTransparency = 1.000
+		Sample_2.Image = "http://www.roblox.com/asset/?id=4560909609"
+		Sample_2.ImageTransparency = 0.600
+
+		Sample_3.Name = "Sample"
+		Sample_3.Parent = ScreenGui
+		Sample_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Sample_3.BackgroundTransparency = 1.000
+		Sample_3.Image = "http://www.roblox.com/asset/?id=4560909609"
+		Sample_3.ImageTransparency = 0.600
+
+		local ms = game.Players.LocalPlayer:GetMouse()
+		local btn = fiber_manual_record
+
+
+		btn.MouseButton1Click:Connect(function()
+			local c = Sample:Clone()
+			c.Parent = btn
+			local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+			c.Position = UDim2.new(0, x, 0, y)
+			local len, size = 0.35, nil
+			if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+				size = (btn.AbsoluteSize.X * 1.5)
+			else
+				size = (btn.AbsoluteSize.Y * 1.5)
+			end
+			c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+			for i = 1, 10 do
+				c.ImageTransparency = c.ImageTransparency + 0.05
+				wait(len / 12)
+			end
+			c:Destroy()
+		end)
+
+		local frame = Frame_5
+		local enabled = false
+
+		function turn()
+			enabled = not enabled
+			callback(enabled)
+
+			if enabled then
+				while enabled and checked.ImageTransparency > 0 and wait() do
+					checked.ImageTransparency = checked.ImageTransparency - 0.2
+				end
+			else
+				while not enabled and checked.ImageTransparency < 1 and wait() do
+					checked.ImageTransparency = checked.ImageTransparency + 0.2
+				end
+			end
+		end
+
+		checked.MouseButton1Click:Connect(turn)
+		unchecked.MouseButton1Click:Connect(turn)
+
+		local ms = game.Players.LocalPlayer:GetMouse()
+
+		local btn = checked
+
+
+		btn.MouseButton1Click:Connect(function()
+			local c = Sample:Clone()
+			c.Parent = btn
+			local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+			c.Position = UDim2.new(0, x, 0, y)
+			local len, size = 0.35, nil
+			if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+				size = (btn.AbsoluteSize.X * 1.5)
+			else
+				size = (btn.AbsoluteSize.Y * 1.5)
+			end
+			c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+			for i = 1, 10 do
+				c.ImageTransparency = c.ImageTransparency + 0.05
+				wait(len / 12)
+			end
+			c:Destroy()
+		end)
+
+		local ms = game.Players.LocalPlayer:GetMouse()
+
+		local btn = unchecked
+
+
+		btn.MouseButton1Click:Connect(function()
+			local c = Sample:Clone()
+			c.Parent = btn
+			local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+			c.Position = UDim2.new(0, x, 0, y)
+			local len, size = 0.35, nil
+			if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+				size = (btn.AbsoluteSize.X * 1.5)
+			else
+				size = (btn.AbsoluteSize.Y * 1.5)
+			end
+			c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+			for i = 1, 10 do
+				c.ImageTransparency = c.ImageTransparency + 0.05
+				wait(len / 12)
+			end
+			c:Destroy()
+		end)
+	end
+
 	function window:Slider(text, options, callback)
 		local Frame_6 = Instance.new("Frame")
 		local TextLabel_3 = Instance.new("TextLabel")
