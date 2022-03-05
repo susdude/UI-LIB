@@ -311,10 +311,12 @@ function library:Window(title)
 	end
 
 	function window:NormalButton(text, callback)
-		local Frame_5 = Instance.new("Frame")
-		local TextLabel_2 = Instance.new("TextLabel")
-		local Sample_2 = Instance.new("ImageLabel")
-		local Sample_3 = Instance.new("ImageLabel")
+		local checked1 = Instance.new("ImageButton")	
+		local unchecked1 = Instance.new("ImageButton")
+		local Frame_55 = Instance.new("Frame")
+		local TextLabel_22 = Instance.new("TextLabel")
+		local Sample_22 = Instance.new("ImageLabel")
+		local Sample_33 = Instance.new("ImageLabel")
 		local Frame_6 = Instance.new("Frame")
 
 		Frame_5.Parent = ScrollingFrame
