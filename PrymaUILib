@@ -420,7 +420,7 @@ function library:Window(title)
 
 		local ms = game.Players.LocalPlayer:GetMouse()
 
-		local btn = checked
+		local btn = checked1
 
 
 		btn.MouseButton1Click:Connect(function()
@@ -444,7 +444,7 @@ function library:Window(title)
 
 		local ms = game.Players.LocalPlayer:GetMouse()
 
-		local btn = unchecked
+		local btn = unchecked1
 
 
 		btn.MouseButton1Click:Connect(function()
